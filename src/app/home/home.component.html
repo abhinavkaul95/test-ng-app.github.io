@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="my-wishlist" [@books] = "books.length">
+    <span>{{ itemCount }}</span>
+    <ul>
+      <li *ngFor = "let book of books"> {{ book }} </li>
+    </ul>
+  </div>
+</div>
+<form>
+  <input type="text" class="txt" name="book-name" [(ngModel)] = "bookname"/>
+  <input type="submit" class="btn" value="Submit" (click) = "addItem()"/>
+</form>
